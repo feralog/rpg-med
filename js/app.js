@@ -126,13 +126,24 @@ function populateModuleList() {
  * Configura todos os event listeners
  */
 function setupEventListeners() {
-    // Login screen - vai direto para Quest Hub (GO AVC 2)
+    // Login screen - verifica se tem personagem criado
     document.getElementById('enter-system-btn').addEventListener('click', () => {
-        // Auto-seleciona GO AVC 2
-        currentSpecialty = 'go';
-        currentSubcategory = 'avc2';
-        showModuleSelectionScreen();
+        if (rpgPlayer.hasCharacter()) {
+            // Já tem personagem, vai direto para Quest Hub
+            currentSpecialty = 'go';
+            currentSubcategory = 'avc2';
+            showModuleSelectionScreen();
+        } else {
+            // Não tem personagem, vai para criação
+            showCharacterCreationScreen();
+        }
     });
+
+    // Initialize character creation
+    initializeCharacterCreation();
+
+    // Initialize cheat codes
+    initializeCheatCodes();
 
     // Specialty selection (REMOVIDO - não é mais necessário)
     // document.getElementById('go-specialty-btn').addEventListener('click', () => selectSpecialty('go'));
@@ -325,15 +336,11 @@ function showModuleSelectionScreen() {
         return;
     }
 
-    const specialty = quizConfig.specialties[currentSpecialty];
+    // Update Character Sheet
+    updateCharacterSheet();
 
-    // Atualiza o título da especialidade/subcategoria
-    let titleText = specialty.name;
-    if (specialty.hasSubcategories && currentSubcategory && specialty.subcategories[currentSubcategory]) {
-        titleText += ` - ${specialty.subcategories[currentSubcategory].name}`;
-    }
-    document.getElementById('specialty-title').textContent = titleText;
-    document.getElementById('specialty-subtitle').textContent = `Escolha uma das opções abaixo`;
+    // Generate Quest Cards
+    generateQuestCards();
 
     // Update back to specialty button to handle subcategories
     const backToSpecialtyBtn = document.getElementById('back-to-specialty-btn');
@@ -981,6 +988,29 @@ function showReviewScreen() {
     // Calcula a pontuação
     const totalQuestions = correctAnswers + incorrectAnswers;
     const scorePercentage = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+
+    // RPG SYSTEM: Give XP if quest completed successfully
+    if (currentModule && scorePercentage >= 70) {
+        const wasAlreadyCompleted = rpgPlayer.isQuestCompleted(currentModule);
+
+        if (!wasAlreadyCompleted) {
+            // First time completing this quest
+            const xpData = rpgPlayer.completeQuest(currentModule, scorePercentage);
+
+            // Show XP gain feedback
+            setTimeout(() => {
+                showXPGainFeedback(xpData);
+                showQuestCompleteFeedback(currentModule, scorePercentage);
+            }, 1000);
+        } else {
+            // Refazer - just update score
+            rpgPlayer.data.questScores[currentModule].score = Math.max(
+                rpgPlayer.data.questScores[currentModule].score,
+                scorePercentage
+            );
+            rpgPlayer.save();
+        }
+    }
 
     // Atualiza elementos da tela de revisão
     document.getElementById('final-score-circle').textContent = `${scorePercentage}%`;
