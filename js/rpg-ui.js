@@ -230,8 +230,13 @@ function startQuest(questId) {
     // Set current module to the quest ID
     currentModule = questId;
 
-    // Show mode selection
-    showModeSelection(questId);
+    // Check if it's a preparation quest
+    if (quest.type === 'preparation') {
+        showPreparationScreen(quest);
+    } else {
+        // Show mode selection for regular quests
+        showModeSelection(questId);
+    }
 }
 
 // ============================================
@@ -379,6 +384,139 @@ function showQuestCompleteFeedback(questId, score) {
     document.body.appendChild(notification);
 }
 
+// ============================================
+// PREPARATION QUEST (Reading Materials)
+// ============================================
+
+function showPreparationScreen(quest) {
+    hideAllScreens();
+    screens.preparation.classList.remove('d-none');
+
+    // Load reading progress
+    const progress = rpgPlayer.getPreparationProgress();
+
+    // Generate checklist
+    generateMaterialsChecklist(quest.materials, progress);
+
+    // Update progress bar
+    updatePreparationProgress(progress, quest.materials.length);
+
+    // Set up event listeners
+    setupPreparationEventListeners(quest);
+}
+
+function generateMaterialsChecklist(materials, progress) {
+    const container = document.getElementById('materials-checklist');
+    container.innerHTML = '';
+
+    materials.forEach((material, index) => {
+        const isChecked = progress.includes(material.file);
+
+        const item = document.createElement('div');
+        item.className = 'card mb-3 shadow-sm';
+        item.innerHTML = `
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <input
+                        type="checkbox"
+                        class="form-check-input me-3"
+                        id="material-${index}"
+                        data-file="${material.file}"
+                        ${isChecked ? 'checked' : ''}
+                        style="width: 24px; height: 24px; cursor: pointer;">
+                    <label for="material-${index}" class="flex-grow-1 mb-0" style="cursor: pointer;">
+                        <strong>${material.title}</strong>
+                        <br>
+                        <small class="text-muted">
+                            <i class="fas ${material.type === 'resumo' ? 'fa-file-alt' : 'fa-book'}"></i>
+                            ${material.type === 'resumo' ? 'Resumo' : 'Guia'}
+                        </small>
+                    </label>
+                    <button
+                        class="btn btn-sm btn-outline-primary"
+                        onclick="openMaterial('${material.type}', '${material.file}')">
+                        <i class="fas fa-eye me-1"></i>Ler
+                    </button>
+                </div>
+            </div>
+        `;
+
+        container.appendChild(item);
+    });
+
+    // Add event listeners to checkboxes
+    document.querySelectorAll('#materials-checklist input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', handleMaterialCheckboxChange);
+    });
+}
+
+function handleMaterialCheckboxChange(event) {
+    const file = event.target.dataset.file;
+    const isChecked = event.target.checked;
+
+    // Update progress in rpgPlayer
+    rpgPlayer.updatePreparationProgress(file, isChecked);
+
+    // Update progress bar
+    const progress = rpgPlayer.getPreparationProgress();
+    const quest = RPG_CONFIG.quests.find(q => q.type === 'preparation');
+    updatePreparationProgress(progress, quest.materials.length);
+
+    // Enable/disable complete button
+    const completeBtn = document.getElementById('complete-preparation-btn');
+    completeBtn.disabled = progress.length < quest.materials.length;
+}
+
+function updatePreparationProgress(progress, total) {
+    const percentage = Math.floor((progress.length / total) * 100);
+    const progressBar = document.getElementById('preparation-progress-bar');
+    const progressText = document.getElementById('preparation-progress-text');
+
+    progressBar.style.width = `${percentage}%`;
+    progressText.textContent = `${progress.length}/${total} Completo`;
+
+    // Enable complete button if all checked
+    const completeBtn = document.getElementById('complete-preparation-btn');
+    completeBtn.disabled = progress.length < total;
+}
+
+function setupPreparationEventListeners(quest) {
+    // Back button
+    document.getElementById('preparation-back-btn').onclick = () => {
+        showModuleSelectionScreen();
+    };
+
+    // Complete button
+    document.getElementById('complete-preparation-btn').onclick = () => {
+        completePreparationQuest(quest);
+    };
+}
+
+function completePreparationQuest(quest) {
+    // Check if already completed
+    if (rpgPlayer.isQuestCompleted(quest.id)) {
+        alert('Você já completou esta quest!');
+        return;
+    }
+
+    // Mark quest as completed and give XP
+    const xpData = rpgPlayer.completeQuest(quest.id, 100); // 100% score for preparation
+
+    // Show feedback
+    showXPGainFeedback(xpData);
+    showQuestCompleteFeedback(quest.id, 100);
+
+    // Return to Quest Hub after a delay
+    setTimeout(() => {
+        showModuleSelectionScreen();
+    }, 2000);
+}
+
+function openMaterial(type, filename) {
+    // Reuse existing file loading function
+    loadFile(type === 'resumo' ? 'resumos' : 'guias', filename);
+}
+
 // Export functions
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
@@ -389,6 +527,7 @@ if (typeof module !== 'undefined' && module.exports) {
         initializeCheatCodes,
         showXPGainFeedback,
         showLevelUpFeedback,
-        showQuestCompleteFeedback
+        showQuestCompleteFeedback,
+        showPreparationScreen
     };
 }

@@ -3,311 +3,288 @@
 
 > *"O conhecimento é a espada mais afiada que um médico pode empunhar."*
 
-Bem-vindo, aventureiro! Esta é sua jornada épica através dos domínios da Ginecologia e Obstetrícia. Cada tema estudado é uma quest a ser completada, cada quiz um desafio a ser superado, e cada conceito dominado uma conquista para sua carreira médica.
-
----
-
-## 👤 SEU CHARACTER SHEET
-
-**Nome do Aventureiro**: *(Escreva seu nome aqui)*
-**Classe**: Estudante de Medicina
-**Especialização**: Ginecologia & Obstetrícia
-**Nível Atual**: 1 - Iniciante
-
-### 📊 Status & Progressão
-
-**XP Total**: `0 / 1000 XP`
-
-```
-[░░░░░░░░░░░░░░░░░░░░] 0%
-```
-
-**Nível atual**: Iniciante (Level 1)
-
-#### 🎯 Próximo Nível:
-- **Level 2** (Aprendiz) - 200 XP
-- **Level 3** (Praticante) - 400 XP
-- **Level 4** (Expert) - 700 XP
-- **Level 5** (Mestre) - 1000 XP ⭐
-
----
-
-## 🗺️ MAPA DE QUESTS
-
-### 📚 ZONA 1: FUNDAMENTOS GINECOLÓGICOS
-
-#### ✅ Quest 1: O Mistério da Citologia Oncótica
-**Status**: 🔓 DESBLOQUEADA
-**Dificuldade**: ⭐ Iniciante
-**Recompensa**: +100 XP
-**Progresso**: [ ] Não iniciada
-
-📂 **Recursos**:
-- [📖 Leia a Quest](quests/01-citologia-oncotica/QUEST.md)
-- [📚 Guia de Estudos](quests/01-citologia-oncotica/guia.md)
-- [📝 Resumo](quests/01-citologia-oncotica/resumo.md)
-- ⚔️ Quiz: Acesse via `index.html` → GO → AVC 2 → Citologia Oncótica
-
-**Como completar**:
-- [ ] Ler o guia completo
-- [ ] Revisar o resumo
-- [ ] Fazer o quiz (≥70% de acertos)
-- [ ] Marcar como completa após atingir a meta
-
----
-
-#### 🔒 Quest 2: O Desafio das Vulvovaginites
-**Status**: 🔒 BLOQUEADA (Complete Quest 1 primeiro)
-**Dificuldade**: ⭐⭐ Intermediário
-**Recompensa**: +120 XP
-**Progresso**: [ ] Bloqueada
-
-📂 **Recursos**:
-- [📖 Leia a Quest](quests/02-vulvovaginites/QUEST.md)
-- 🔒 Desbloqueie completando a Quest 1
-
----
-
-#### 🔒 Quest 3: As ISTs e a Temível DIPA
-**Status**: 🔒 BLOQUEADA (Complete Quest 2 primeiro)
-**Dificuldade**: ⭐⭐⭐ Avançado
-**Recompensa**: +130 XP
-**Progresso**: [ ] Bloqueada
-
-📂 **Recursos**:
-- [📖 Leia a Quest](quests/03-ists-dipa/QUEST.md)
-- 🔒 Desbloqueie completando as Quests 1 e 2
-
----
-
-### 🏥 ZONA 2: CLÍNICA AVANÇADA
-
-#### 🔒 Quest 4: Patologias do Trato Genital Inferior
-**Status**: 🔒 BLOQUEADA (Complete Quest 3 primeiro)
-**Dificuldade**: ⭐⭐⭐ Avançado
-**Recompensa**: +140 XP
-**Progresso**: [ ] Bloqueada
-
-📂 **Recursos**:
-- [📖 Leia a Quest](quests/04-patologias-tgi/QUEST.md)
-- 🔒 Desbloqueie completando as Quests 1, 2 e 3
-
----
-
-### 🤰 ZONA 3: OBSTETRÍCIA ESSENCIAL
-
-#### 🔒 Quest 5: A Grande Jornada do Parto
-**Status**: 🔒 BLOQUEADA (Complete Quest 4 primeiro)
-**Dificuldade**: ⭐⭐⭐⭐ Especialista
-**Recompensa**: +150 XP
-**Progresso**: [ ] Bloqueada
-
-📂 **Recursos**:
-- [📖 Leia a Quest](quests/05-trabalho-parto/QUEST.md)
-- 🔒 Desbloqueie completando as Quests 1-4
-
----
-
-#### 🔒 Quest 6: O Sagrado Puerpério
-**Status**: 🔒 BLOQUEADA (Complete Quest 5 primeiro)
-**Dificuldade**: ⭐⭐⭐⭐ Especialista
-**Recompensa**: +160 XP
-**Progresso**: [ ] Bloqueada
-
-📂 **Recursos**:
-- [📖 Leia a Quest](quests/06-puerperio-amamentacao/QUEST.md)
-- 🔒 Desbloqueie completando as Quests 1-5
-
----
-
-### 🐉 BOSS BATTLES - REVISÕES GERAIS
-
-#### 🔒 BOSS 1: O Grande Examinador
-**Status**: 🔒 BLOQUEADA (Complete TODAS as 6 Quests primeiro)
-**Dificuldade**: ⚔️⚔️⚔️⚔️⚔️ BOSS LEVEL
-**Recompensa**: +300 XP
-**Progresso**: [ ] Bloqueada
-
-📂 **Recursos**:
-- [🐉 Leia sobre o Boss](quests/BOSS-BATTLES/revisao-geral-1/BOSS.md)
-- 🔒 Desbloqueie completando TODAS as 6 quests
-
----
-
-#### 🔒 BOSS 2: O Examinador Supremo (FINAL BOSS)
-**Status**: 🔒 BLOQUEADA (Derrote o Boss 1 primeiro)
-**Dificuldade**: ⚔️⚔️⚔️⚔️⚔️⚔️ LEGENDARY
-**Recompensa**: +300 XP
-**Progresso**: [ ] Bloqueada
-
-📂 **Recursos**:
-- [👑 Leia sobre o Boss Final](quests/BOSS-BATTLES/revisao-geral-2/BOSS.md)
-- 🔒 Desbloqueie derrotando o Boss 1
-
----
-
-## 🏆 CONQUISTAS DESBLOQUEADAS
-
-### 🏅 Badges Conquistadas
-
-*Suas conquistas aparecerão aqui conforme você completa quests!*
-
-- [ ] 🔬 **Guardião do Colo Uterino** - Complete Quest 1
-- [ ] 🔥 **Restaurador da Flora** - Complete Quest 2
-- [ ] ⚠️ **Defensor da Saúde Sexual** - Complete Quest 3
-- [ ] 🌸 **Mestre da Colposcopia** - Complete Quest 4
-- [ ] 👶 **Parteiro(a) Habilidoso(a)** - Complete Quest 5
-- [ ] 🍼 **Guardião do Vínculo Materno** - Complete Quest 6
-- [ ] 🐉 **Sobrevivente do Grande Examinador** - Derrote Boss 1
-- [ ] 👑 **MESTRE DE GINECOLOGIA E OBSTETRÍCIA** - Derrote Boss 2
-
-### 🎊 Conquistas Especiais
-
-- [ ] **"Primeira Vitória"** - Complete sua primeira quest
-- [ ] **"Metade do Caminho"** - Complete 3 quests
-- [ ] **"Zona Completa"** - Complete todas as 6 quests
-- [ ] **"Sobrevivente"** - Derrote um boss
-- [ ] **"JORNADA COMPLETA"** - Derrote ambos os bosses (100%)
-- [ ] **"PERFECCIONISTA SUPREMO"** - Obtenha 95%+ no Boss Final
-
----
-
-## 📋 SISTEMA DE PROGRESSÃO
-
-### Como Funciona o "Gating" (Bloqueio)
-
-Este sistema usa o **"Honor System"** (Sistema de Honra):
-
-1. **Você só pode avançar se completar a quest anterior**
-2. Marque manualmente as checkboxes `[ ]` → `[x]` conforme completa cada etapa
-3. **Regra de Ouro**: Só marque como completa se realmente atingiu ≥70% de acertos no quiz
-4. Bosses exigem que TODAS as quests anteriores estejam completas
-
-### Critérios de Conclusão
-
-#### Para Quests Normais:
-- ✅ Ler o material (guia + resumo)
-- ✅ Fazer o quiz via interface web
-- ✅ Atingir **≥70% de acertos**
-- ✅ Marcar como completa neste README
-
-#### Para Boss Battles:
-- ✅ Ter completado TODAS as quests anteriores
-- ✅ Revisar todo o material
-- ✅ Fazer o quiz via interface web
-- ✅ Atingir **≥80% de acertos** (Boss 1) ou **≥85%** (Boss 2)
-- ✅ Marcar como completa neste README
+Bem-vindo, aventureiro! Esta é sua jornada épica através dos domínios da Ginecologia e Obstetrícia. Transformamos o estudo em uma experiência RPG completa com personagens, XP, níveis e quests sequenciais!
 
 ---
 
 ## 🎮 COMO JOGAR
 
-### 1️⃣ Inicie Sua Jornada
-- Leia a [Quest 1](quests/01-citologia-oncotica/QUEST.md)
-- Estude os materiais disponíveis
-
-### 2️⃣ Teste Seu Conhecimento
-- Abra o arquivo `index.html` no navegador
-- Selecione: **GO** → **AVC 2** → **Nome do Módulo**
-- Faça o quiz
-
-### 3️⃣ Acompanhe Seu Progresso
-- Marque as checkboxes neste README conforme avança
-- Atualize sua barra de XP manualmente
-- Desbloqueie badges conforme conquista objetivos
-
-### 4️⃣ Avance Gradualmente
-- Complete uma quest por vez
-- Não pule etapas (Honor System!)
-- Revise se não atingir a meta mínima
+1. **Abra `index.html`** no navegador
+2. **Crie seu personagem** (escolha avatar e nome)
+3. **Complete as quests na ordem** (cada quest desbloqueia a próxima)
+4. **Ganhe XP** e suba de nível
+5. **Derrote os boss battles** ao final!
 
 ---
 
-## 🛠️ RECURSOS TÉCNICOS
+## 🚀 SISTEMA RPG
 
-### 📦 O Que Este Repositório Contém
+### 📊 Níveis & XP
+
+| Nível | Título | XP Necessário |
+|-------|--------|---------------|
+| 1 | Iniciante | 0 XP |
+| 2 | Aprendiz | 200 XP |
+| 3 | Praticante | 400 XP |
+| 4 | Expert | 700 XP |
+| 5 | Mestre | 1000 XP ⭐ |
+
+**XP Total Disponível**: 1480 XP (se completar tudo!)
+
+---
+
+## 🗺️ MAPA DE QUESTS
+
+### 📚 Quest 1: Preparação
+**Título**: Estudar os Fundamentos
+**Tipo**: Quest de Leitura
+**Dificuldade**: ⭐ Iniciante
+**Recompensa**: +80 XP
+**Status**: 🔓 SEMPRE DESBLOQUEADA
+
+**Missão**: Leia todos os resumos e guias para se preparar!
+
+**Materiais para ler** (10 documentos):
+- ✅ Citologia Oncótica - Resumo
+- ✅ Vulvovaginites - Resumo
+- ✅ ISTs e DIPA - Resumo
+- ✅ Trabalho de Parto - Resumo
+- ✅ Puerpério e Amamentação - Resumo
+- ✅ Citologia Oncótica - Guia
+- ✅ Vulvovaginites - Guia
+- ✅ ISTs e DIPA - Guia
+- ✅ Trabalho de Parto - Guia
+- ✅ Puerpério e Amamentação - Guia
+
+**Como completar**: Marque cada item como lido dentro da interface. Quando marcar todos, clique em "Completar Quest" para ganhar +80 XP!
+
+---
+
+### 🔬 Quest 2: Citologia Oncótica
+**Título**: O Mistério da Citologia Oncótica
+**Dificuldade**: ⭐ Iniciante
+**Recompensa**: +100 XP
+**Prereq**: Complete Quest 1
+
+**Missão**: Domine o rastreamento do câncer cervical
+
+**Como completar**: Faça o quiz e alcance ≥70% de acertos
+
+---
+
+### 🔥 Quest 3: Vulvovaginites
+**Título**: O Desafio das Vulvovaginites
+**Dificuldade**: ⭐⭐ Intermediário
+**Recompensa**: +120 XP
+**Prereq**: Complete Quest 2
+
+**Missão**: Identifique e trate infecções vaginais
+
+---
+
+### ⚠️ Quest 4: ISTs e DIPA
+**Título**: As ISTs e a Temível DIPA
+**Dificuldade**: ⭐⭐⭐ Avançado
+**Recompensa**: +130 XP
+**Prereq**: Complete Quest 3
+
+**Missão**: Diagnostique e trate ISTs e complicações
+
+---
+
+### 🌸 Quest 5: Patologias TGI
+**Título**: Patologias do Trato Genital Inferior
+**Dificuldade**: ⭐⭐⭐ Avançado
+**Recompensa**: +140 XP
+**Prereq**: Complete Quest 4
+
+**Missão**: Domine lesões e neoplasias do TGI
+
+---
+
+### 👶 Quest 6: Trabalho de Parto
+**Título**: A Grande Jornada do Parto
+**Dificuldade**: ⭐⭐⭐⭐ Especialista
+**Recompensa**: +150 XP
+**Prereq**: Complete Quest 5
+
+**Missão**: Conduza partos com segurança
+
+---
+
+### 🍼 Quest 7: Puerpério e Amamentação
+**Título**: O Sagrado Puerpério
+**Dificuldade**: ⭐⭐⭐⭐ Especialista
+**Recompensa**: +160 XP
+**Prereq**: Complete Quest 6
+
+**Missão**: Acompanhe mãe e bebê no pós-parto
+
+---
+
+## ⚔️ BOSS BATTLES
+
+### 🐉 BOSS 1: O Grande Examinador
+**Título**: Revisão Geral - Parte 1
+**Dificuldade**: ⚔️⚔️⚔️⚔️⚔️ Boss
+**Recompensa**: +300 XP
+**Prereq**: Complete TODAS as 7 quests principais
+
+**Desafio**: Teste TODOS os seus conhecimentos em um quiz abrangente!
+**Meta**: ≥80% de acertos
+
+---
+
+### 👑 BOSS 2: O Examinador Supremo
+**Título**: Revisão Geral - Parte 2
+**Dificuldade**: ⚔️⚔️⚔️⚔️⚔️⚔️ Legendary
+**Recompensa**: +300 XP
+**Prereq**: Complete BOSS 1
+
+**Desafio**: O desafio final! Prove que você é um MESTRE!
+**Meta**: ≥85% de acertos
+
+---
+
+## 🎮 CHEAT CODES (Sincronização entre dispositivos)
+
+Use estes códigos para sincronizar seu progresso entre diferentes dispositivos:
+
+| Código | Quest | XP Total |
+|--------|-------|----------|
+| `QUEST1-PREPARACAO` | Quest 1: Preparação | 80 XP |
+| `QUEST2-RASTREIO` | Quest 2: Citologia Oncótica | 180 XP |
+| `QUEST3-FLORA` | Quest 3: Vulvovaginites | 300 XP |
+| `QUEST4-ISTS` | Quest 4: ISTs e DIPA | 430 XP |
+| `QUEST5-COLPO` | Quest 5: Patologias TGI | 570 XP |
+| `QUEST6-PARTO` | Quest 6: Trabalho de Parto | 720 XP |
+| `QUEST7-PUERPERIO` | Quest 7: Puerpério e Amamentação | 880 XP |
+| `BOSS1-EXAMINADOR` | BOSS 1: Revisão Geral Parte 1 | 1180 XP |
+| `BOSS2-SUPREMO` | BOSS 2: Revisão Geral Parte 2 | 1480 XP |
+
+**Como usar**:
+1. Complete uma quest e copie o código de sincronização mostrado
+2. Em outro dispositivo, clique no botão ⚙️ no Quest Hub
+3. Cole o código e clique em "Aplicar"
+4. Seu progresso será sincronizado!
+
+---
+
+## 🏆 CONQUISTAS & BADGES
+
+Ao completar quests, você desbloqueia badges especiais:
+
+- 📚 **Estudioso**: Complete a Quest de Preparação
+- 🔬 **Rastreador**: Complete Citologia Oncótica
+- 🔥 **Conhecedor da Flora**: Complete Vulvovaginites
+- ⚠️ **Caçador de ISTs**: Complete ISTs e DIPA
+- 🌸 **Especialista em TGI**: Complete Patologias TGI
+- 👶 **Parteiro Expert**: Complete Trabalho de Parto
+- 🍼 **Guardião do Puerpério**: Complete Puerpério e Amamentação
+- 🐉 **Vencedor do Boss 1**: Derrote o Grande Examinador
+- 👑 **MESTRE SUPREMO**: Derrote o Examinador Supremo
+
+---
+
+## 📖 COMO FUNCIONA
+
+### Interface RPG Completa
+
+1. **Login Screen**: Entre no sistema com um clique
+2. **Criação de Personagem**: Escolha seu avatar (masculino/feminino) e nome
+3. **Quest Hub**: Veja todas as quests, seu XP, nível e progresso
+4. **Quest Cards**: Cards visuais mostram status (bloqueado/desbloqueado/completo)
+5. **Quest de Preparação**: Checklist interativa de materiais de leitura
+6. **Quiz Interface**: Interface de quiz completa com navegação livre
+7. **Feedback Visual**: Animações de XP ganho, level up e quest completa
+
+### Progresso Automático
+
+- ✅ **XP concedido automaticamente** ao completar quests com ≥70%
+- ✅ **Level up automático** quando atinge XP necessário
+- ✅ **Quests desbloqueadas automaticamente** ao completar prerequisitos
+- ✅ **Progresso salvo** no localStorage do navegador
+
+### Modos de Quiz
+
+- **Modo Quiz**: Navegação livre entre questões, sem feedback imediato
+- **Modo Mentor**: Feedback imediato após confirmar resposta, com explicação
+
+---
+
+## 🛠️ ESTRUTURA TÉCNICA
 
 ```
 rpg-med/
-├── README.md                    # ← VOCÊ ESTÁ AQUI (Seu Character Sheet)
-├── index.html                   # Interface do quiz
-├── quests/                      # Todas as suas quests
-│   ├── 01-citologia-oncotica/
-│   ├── 02-vulvovaginites/
-│   ├── 03-ists-dipa/
-│   ├── 04-patologias-tgi/
-│   ├── 05-trabalho-parto/
-│   ├── 06-puerperio-amamentacao/
-│   └── BOSS-BATTLES/
-├── assets/                      # Recursos visuais
-├── css/                         # Estilos da interface
-└── js/                          # Lógica do quiz
+├── index.html                    # Interface principal (single page)
+├── README.md                     # Este arquivo
+│
+├── css/
+│   └── styles.css                # Estilos completos (incluindo RPG theme)
+│
+├── js/
+│   ├── config.js                 # Configuração de quizzes (GO AVC 2)
+│   ├── data.js                   # Gerenciamento de dados
+│   ├── rpg-system.js             # Sistema RPG (XP, níveis, quests)
+│   ├── rpg-ui.js                 # Interface RPG (personagem, quest cards)
+│   └── app.js                    # Lógica principal do quiz
+│
+└── subjects/
+    └── GO/
+        └── AVC 2/
+            ├── GOQuestions/      # Arquivos JSON dos quizzes
+            ├── GOResumos/        # Resumos (.txt)
+            └── GOGuias/          # Guias de estudo (.txt)
 ```
 
-### 🌐 Acesso ao Quiz
+---
 
-1. **Método 1 - Local**:
-   - Abra `index.html` diretamente no navegador
+## 🎯 DICAS PARA O SUCESSO
 
-2. **Método 2 - GitHub Pages**:
-   - Acesse: `https://feralog.github.io/rpg-med/`
+1. **Comece pela Quest 1**: Leia TODOS os materiais antes de fazer quizzes
+2. **Use o Modo Mentor**: Aprenda com feedback imediato nas primeiras rodadas
+3. **Revise materiais**: Clique em "Ler" na Quest de Preparação para revisar
+4. **Refaça quests**: Tente melhorar sua pontuação (não ganha XP de novo, mas aprende mais!)
+5. **Sincronize progresso**: Use cheat codes para estudar em celular/PC/tablet
+6. **Meta Boss Battles**: Só aparecem quando você completar TODAS as 7 quests
 
 ---
 
-## 💡 DICAS DO MESTRE
+## 📊 TRACKING DE PROGRESSO
 
-### 🎯 Para Máxima Eficiência:
+Todo seu progresso é salvo automaticamente:
 
-1. **Estude em sessões focadas** (técnica Pomodoro: 25 min estudo + 5 min pausa)
-2. **Leia o guia ANTES do resumo** (compreensão → condensação)
-3. **Faça o quiz SEM consulta** (simule condição real de prova)
-4. **Revise seus erros** (são as melhores oportunidades de aprendizado)
-5. **Não pule quests** (a progressão é construída em cima de bases sólidas)
+- Nome e avatar
+- XP e nível atual
+- Quests completadas
+- Pontuação de cada quest
+- Progresso de leitura (Quest de Preparação)
+- Data de última jogada
 
-### ⚠️ Armadilhas Comuns:
-
-- ❌ Fazer o quiz antes de estudar (você vai só adivinhar)
-- ❌ Marcar como completo sem atingir 70% (você está enganando a si mesmo)
-- ❌ Pular direto para os bosses (você vai sofrer!)
-- ❌ Estudar cansado (mente fatigada não aprende)
+**Importante**: O progresso fica salvo no navegador (localStorage). Para backup, use os cheat codes!
 
 ---
 
-## 🎊 MENSAGEM FINAL
+## 🔄 RESET DE DADOS
 
-Aventureiro, você está prestes a embarcar em uma jornada épica de conhecimento. Esta não é apenas uma lista de estudos - é uma **experiência gamificada** projetada para tornar seu aprendizado mais engajante, organizado e eficaz.
+Se quiser começar do zero:
 
-Cada quest completada te aproxima de ser um **Mestre em Ginecologia e Obstetrícia**. Cada boss derrotado prova que você domina o conteúdo em nível de excelência.
-
-**Lembre-se**:
-- 🎮 O jogo é desafiador, mas você foi feito para vencer
-- 📚 O conhecimento é seu maior poder
-- 🏆 A jornada é longa, mas cada passo vale a pena
-- ⚔️ Nunca desista - bosses existem para serem derrotados!
+1. Abra o console do navegador (F12)
+2. Digite: `localStorage.clear()`
+3. Recarregue a página
 
 ---
 
-## 📞 SUPORTE & CONTRIBUIÇÕES
+## 🎓 SOBRE O PROJETO
 
-- 🐛 Encontrou um erro? Abra uma issue no GitHub
-- 💡 Tem sugestões? Contribua com o projeto
-- 📧 Dúvidas? Entre em contato com os mantenedores
+**The Knowledge Quest** é um sistema de gamificação completo para estudos médicos, criado especificamente para o conteúdo de **Ginecologia & Obstetrícia - AVC 2**.
 
----
+Transformamos o aprendizado em uma jornada épica onde cada conceito dominado te aproxima do nível de **MESTRE**!
 
-<div align="center">
-
-**🗡️ QUE SUA JORNADA COMECE! 🛡️**
-
-*"O conhecimento é a luz que dissipa as trevas da ignorância."*
+Bons estudos, aventureiro! 🚀
 
 ---
 
-[![Nivel](https://img.shields.io/badge/Nivel-1-blue)]()
-[![Progresso](https://img.shields.io/badge/Progresso-0%25-red)]()
-[![Status](https://img.shields.io/badge/Status-Iniciante-yellow)]()
-
-**Última Atualização**: Novembro 2025
-**Versão do Sistema**: RPG Knowledge Quest v1.0
-
-</div>
+**Versão**: 2.0 (com Quest de Preparação)
+**Data**: Novembro 2025
+**Repositório**: [feralog/rpg-med](https://github.com/feralog/rpg-med)
