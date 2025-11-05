@@ -149,13 +149,13 @@ function setupEventListeners() {
     // document.getElementById('go-specialty-btn').addEventListener('click', () => selectSpecialty('go'));
     // document.getElementById('cardio-specialty-btn').addEventListener('click', () => selectSpecialty('cardio'));
     // document.getElementById('tc-specialty-btn').addEventListener('click', () => selectSpecialty('tc'));
-    document.getElementById('clinica-specialty-btn').addEventListener('click', () => selectSpecialty('clinica'));
-    document.getElementById('specialty-back-btn').addEventListener('click', showLoginScreen);
+    // document.getElementById('clinica-specialty-btn').addEventListener('click', () => selectSpecialty('clinica'));
+    // document.getElementById('specialty-back-btn').addEventListener('click', showLoginScreen);
 
-    // Main menu buttons (in module selection screen)
-    document.getElementById('resumos-btn').addEventListener('click', showResumosSelection);
-    document.getElementById('guias-btn').addEventListener('click', showGuiasSelection);
-    document.getElementById('start-quiz-btn').addEventListener('click', showModuleSelectionForQuiz);
+    // Main menu buttons (REMOVIDO - agora usa Quest Cards)
+    // document.getElementById('resumos-btn').addEventListener('click', showResumosSelection);
+    // document.getElementById('guias-btn').addEventListener('click', showGuiasSelection);
+    // document.getElementById('start-quiz-btn').addEventListener('click', showModuleSelectionForQuiz);
 
     // Mode selection
     document.getElementById('quiz-mode-btn').addEventListener('click', () => selectMode('quiz'));
@@ -166,7 +166,7 @@ function setupEventListeners() {
     document.getElementById('resumos-back-btn').addEventListener('click', showModuleSelectionScreen);
     document.getElementById('guias-back-btn').addEventListener('click', showModuleSelectionScreen);
     document.getElementById('file-back-btn').addEventListener('click', handleFileBack);
-    document.getElementById('back-to-specialty-btn').addEventListener('click', showSpecialtySelection);
+    // document.getElementById('back-to-specialty-btn').addEventListener('click', showSpecialtySelection); // REMOVIDO
     document.getElementById('subcategory-back-btn').addEventListener('click', showSpecialtySelection);
 
     // Module selection
@@ -325,7 +325,7 @@ function showLoginScreen() {
 }
 
 /**
- * Mostra a tela de seleção de módulos
+ * Mostra a tela de seleção de módulos (Quest Hub)
  */
 function showModuleSelectionScreen() {
     hideAllScreens();
@@ -341,39 +341,6 @@ function showModuleSelectionScreen() {
 
     // Generate Quest Cards
     generateQuestCards();
-
-    // Update back to specialty button to handle subcategories
-    const backToSpecialtyBtn = document.getElementById('back-to-specialty-btn');
-    if (specialty.hasSubcategories && currentSubcategory) {
-        backToSpecialtyBtn.textContent = 'Trocar Categoria';
-        backToSpecialtyBtn.onclick = showSubcategorySelection;
-    } else {
-        backToSpecialtyBtn.textContent = 'Trocar Especialidade';
-        backToSpecialtyBtn.onclick = showSpecialtySelection;
-    }
-
-    // Mostra/esconde botões baseado na especialidade
-    const resumosBtn = document.getElementById('resumos-btn');
-    const guiasBtn = document.getElementById('guias-btn');
-
-    if (specialty.hasResumos) {
-        resumosBtn.style.display = 'block';
-    } else {
-        resumosBtn.style.display = 'none';
-    }
-
-    if (specialty.hasGuias) {
-        guiasBtn.style.display = 'block';
-    } else {
-        guiasBtn.style.display = 'none';
-    }
-
-    // Inicialmente esconde a lista de módulos
-    const moduleList = document.getElementById('module-list');
-    moduleList.style.display = 'none';
-
-    // Limpa a lista de módulos
-    moduleList.innerHTML = '';
 }
 
 /**
