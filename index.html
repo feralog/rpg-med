@@ -19,18 +19,56 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
                     <div class="card shadow-lg mt-5">
-                        <div class="card-header bg-primary text-white text-center">
-                            <h2 id="quiz-subject-title">Quiz Template</h2>
-                            <p class="mb-0">Sistema de Quiz</p>
+                        <div class="card-header bg-gradient text-white text-center" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <h2 id="quiz-subject-title">The Knowledge Quest</h2>
+                            <p class="mb-0">🗺️ Ginecologia & Obstetrícia - AVC 2</p>
                         </div>
                         <div class="card-body text-center">
-                            <p class="mb-4 text-muted">Bem-vindo ao sistema de quiz educacional</p>
+                            <p class="mb-4 text-muted">⚔️ Bem-vindo, aventureiro! Sua jornada de conhecimento começa aqui.</p>
                             <div class="d-grid gap-3">
-                                <button id="enter-system-btn" class="btn btn-primary btn-lg">
-                                    <i class="fas fa-arrow-right me-2"></i>Entrar no Sistema
+                                <button id="enter-system-btn" class="btn btn-lg text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <i class="fas fa-door-open me-2"></i>Iniciar Jornada
+                                </button>
+                                <button id="cheat-code-btn" class="btn btn-outline-secondary">
+                                    <i class="fas fa-key me-2"></i>Usar Código de Sincronização
                                 </button>
                             </div>
+                            <small class="text-muted mt-3 d-block">
+                                💡 Use o código para continuar seu progresso em outro dispositivo
+                            </small>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: Cheat Code -->
+        <div class="modal fade" id="cheatCodeModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            <i class="fas fa-key text-warning"></i>
+                            Código de Sincronização
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-muted">Cole o código que você recebeu ao completar uma quest:</p>
+                        <div class="mb-3">
+                            <input type="text"
+                                   id="cheat-code-input"
+                                   class="form-control form-control-lg text-center font-monospace"
+                                   placeholder="Ex: QUEST1-RASTREIO-2024"
+                                   style="text-transform: uppercase;">
+                        </div>
+                        <div id="cheat-code-result" class="alert d-none"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" id="apply-cheat-code-btn" class="btn btn-primary">
+                            <i class="fas fa-check me-2"></i>Aplicar Código
+                        </button>
                     </div>
                 </div>
             </div>

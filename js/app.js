@@ -122,13 +122,18 @@ function populateModuleList() {
  * Configura todos os event listeners
  */
 function setupEventListeners() {
-    // Login screen
-    document.getElementById('enter-system-btn').addEventListener('click', showSpecialtySelection);
+    // Login screen - vai direto para Quest Hub (GO AVC 2)
+    document.getElementById('enter-system-btn').addEventListener('click', () => {
+        // Auto-seleciona GO AVC 2
+        currentSpecialty = 'go';
+        currentSubcategory = 'avc2';
+        showModuleSelectionScreen();
+    });
 
-    // Specialty selection
-    document.getElementById('go-specialty-btn').addEventListener('click', () => selectSpecialty('go'));
-    document.getElementById('cardio-specialty-btn').addEventListener('click', () => selectSpecialty('cardio'));
-    document.getElementById('tc-specialty-btn').addEventListener('click', () => selectSpecialty('tc'));
+    // Specialty selection (REMOVIDO - não é mais necessário)
+    // document.getElementById('go-specialty-btn').addEventListener('click', () => selectSpecialty('go'));
+    // document.getElementById('cardio-specialty-btn').addEventListener('click', () => selectSpecialty('cardio'));
+    // document.getElementById('tc-specialty-btn').addEventListener('click', () => selectSpecialty('tc'));
     document.getElementById('clinica-specialty-btn').addEventListener('click', () => selectSpecialty('clinica'));
     document.getElementById('specialty-back-btn').addEventListener('click', showLoginScreen);
 
