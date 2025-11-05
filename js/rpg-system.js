@@ -337,16 +337,22 @@ class RPGPlayer {
             };
         }
 
-        // Completa a quest e adiciona XP
+        // Marca TODAS as quests até esta como completadas
+        const questsToComplete = RPG_CONFIG.quests.filter(q => q.number <= quest.number);
+
+        questsToComplete.forEach(q => {
+            if (!this.data.completedQuests.includes(q.id)) {
+                this.data.completedQuests.push(q.id);
+            }
+            this.data.questScores[q.id] = {
+                score: 100,
+                completedAt: new Date().toISOString(),
+                fromCheatCode: true
+            };
+        });
+
+        // Seta o XP total (já inclui XP de todas as quests anteriores)
         this.data.xp = codeData.xp;
-        if (!this.data.completedQuests.includes(quest.id)) {
-            this.data.completedQuests.push(quest.id);
-        }
-        this.data.questScores[quest.id] = {
-            score: 100,
-            completedAt: new Date().toISOString(),
-            fromCheatCode: true
-        };
 
         // Recalcula nível
         this.data.level = this.calculateLevel(this.data.xp);
@@ -354,9 +360,9 @@ class RPGPlayer {
 
         return {
             success: true,
-            message: `${quest.title} desbloqueada! +${quest.xpReward} XP`,
+            message: `${quest.title} e todas as quests anteriores desbloqueadas! XP Total: ${codeData.xp}`,
             questName: quest.title,
-            xpGained: quest.xpReward
+            xpGained: codeData.xp
         };
     }
 
