@@ -580,6 +580,49 @@
                 </div>
             </div>
         </div>
+
+        <!-- Quest Preparação - Reading Checklist Screen -->
+        <div id="preparation-screen" class="screen d-none">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <div class="card shadow-lg mt-3">
+                        <div class="card-header text-white bg-info">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3><i class="fas fa-book-reader me-2"></i>Quest 1: Preparação</h3>
+                                <button id="preparation-back-btn" class="btn btn-sm btn-light">
+                                    <i class="fas fa-arrow-left me-1"></i>Voltar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-info">
+                                <h5><i class="fas fa-info-circle me-2"></i>Missão: Estudar os Fundamentos</h5>
+                                <p class="mb-0">
+                                    Antes de enfrentar os quizzes, você precisa estudar os materiais de apoio!
+                                    Marque cada item como lido após estudá-lo. Quando completar todos, você ganhará <strong>+80 XP</strong> e desbloqueará a próxima quest.
+                                </p>
+                            </div>
+
+                            <div class="progress mb-4" style="height: 30px;">
+                                <div id="preparation-progress-bar" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;">
+                                    <strong id="preparation-progress-text">0/10 Completo</strong>
+                                </div>
+                            </div>
+
+                            <div id="materials-checklist">
+                                <!-- Checklist será gerado dinamicamente -->
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button id="complete-preparation-btn" class="btn btn-lg btn-success" disabled>
+                                    <i class="fas fa-trophy me-2"></i>Completar Quest (+80 XP)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Bootstrap JS Bundle with Popper -->

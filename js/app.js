@@ -46,7 +46,8 @@ const screens = {
     review: document.getElementById('review-screen'),
     resumosSelection: document.getElementById('resumos-selection-screen'),
     guiasSelection: document.getElementById('guias-selection-screen'),
-    fileReading: document.getElementById('file-reading-screen')
+    fileReading: document.getElementById('file-reading-screen'),
+    preparation: document.getElementById('preparation-screen')
 };
 
 // Variáveis globais RPG
