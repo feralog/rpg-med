@@ -37,6 +37,7 @@ let visibleButtonsCount = 10; // Quantidade de botões visíveis (calculado dina
 // Elementos DOM
 const screens = {
     login: document.getElementById('login-screen'),
+    characterCreation: document.getElementById('character-creation-screen'),
     specialtySelection: document.getElementById('specialty-selection-screen'),
     subcategorySelection: document.getElementById('subcategory-selection-screen'),
     moduleSelection: document.getElementById('module-selection-screen'),
@@ -47,6 +48,9 @@ const screens = {
     guiasSelection: document.getElementById('guias-selection-screen'),
     fileReading: document.getElementById('file-reading-screen')
 };
+
+// Variáveis globais RPG
+let selectedAvatar = null;
 
 // Inicialização
 document.addEventListener('DOMContentLoaded', init);

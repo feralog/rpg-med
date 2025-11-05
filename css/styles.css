@@ -986,3 +986,304 @@ body {
         padding: 10px;
     }
 }
+
+/* ============================================
+   RPG THEME STYLES
+   ============================================ */
+
+/* Character Creation Screen */
+.avatar-choice {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.avatar-card {
+    border: 3px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    transition: all 0.3s ease;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-choice:hover .avatar-card {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: #667eea;
+}
+
+.avatar-choice.selected .avatar-card {
+    border-color: #667eea;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+}
+
+.avatar-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.avatar-choice.selected .avatar-icon {
+    transform: scale(1.2);
+    animation: bounce 0.6s ease;
+}
+
+.avatar-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Character Avatar Display */
+.character-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+    border: 3px solid white;
+}
+
+/* Character Sheet Card */
+.character-sheet-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(243,244,246,0.95) 100%);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.character-sheet-card .card-body {
+    background: transparent;
+}
+
+/* Quest List Container */
+.quest-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Quest Card Styles */
+.quest-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: white;
+    border: 2px solid #e0e0e0;
+}
+
+.quest-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.quest-card.quest-unlocked {
+    border-color: #667eea;
+}
+
+.quest-card.quest-unlocked:hover {
+    border-color: #764ba2;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.quest-card.quest-locked {
+    opacity: 0.6;
+    cursor: not-allowed;
+    filter: grayscale(70%);
+}
+
+.quest-card.quest-locked:hover {
+    transform: none;
+}
+
+.quest-card.quest-completed {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    border-color: #28a745;
+}
+
+.quest-card.quest-boss {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border: 3px solid #ffc107;
+}
+
+.quest-card.quest-boss-locked {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    border: 3px solid #dc3545;
+    opacity: 0.7;
+}
+
+/* Quest Card Header */
+.quest-card-header {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.quest-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.quest-info {
+    flex-grow: 1;
+}
+
+.quest-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.quest-description {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+/* Quest Stats */
+.quest-stats {
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.02);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.quest-stat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem;
+}
+
+.quest-stat i {
+    color: #667eea;
+}
+
+/* Quest Actions */
+.quest-actions {
+    padding: 15px 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Lock Overlay */
+.quest-lock-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+/* Badge Styles */
+.badge-locked {
+    background: #6c757d;
+}
+
+.badge-unlocked {
+    background: #667eea;
+}
+
+.badge-completed {
+    background: #28a745;
+}
+
+.badge-boss {
+    background: linear-gradient(90deg, #ffc107 0%, #ff6b6b 100%);
+    color: white;
+    font-weight: bold;
+}
+
+/* XP Bar Animation */
+@keyframes xpGain {
+    0% { width: var(--old-xp); }
+    100% { width: var(--new-xp); }
+}
+
+.xp-bar-animate {
+    animation: xpGain 1s ease-in-out;
+}
+
+/* Level Up Animation */
+@keyframes levelUp {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3) rotate(5deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+.level-up-animation {
+    animation: levelUp 0.6s ease-in-out;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Shine Effect */
+@keyframes shine {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+.quest-card.quest-unlocked::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -200%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: left 0.5s;
+}
+
+.quest-card.quest-unlocked:hover::after {
+    left: 200%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .character-avatar {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .quest-title {
+        font-size: 1.1rem;
+    }
+
+    .quest-icon {
+        font-size: 2rem;
+    }
+
+    .quest-stats {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
